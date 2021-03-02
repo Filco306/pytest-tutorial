@@ -14,7 +14,10 @@ def get_accuracy_for_model(y_pred, y_true, preds_are_probs=True):
 def get_accuracy_for_model_new(y_pred, y_true, preds_are_probs=True):
     if np.any(y_pred is None):
         raise ValueError("NaN values in array {}".format(y_pred))
-    if preds_are_probs is False and ((y_pred == 0) | (y_pred == 1)).all() is False:
+    if (
+        preds_are_probs is False
+        and ((y_pred == 0) | (y_pred == 1)).all() == False  # noqa: E712
+    ):
         raise ValueError(
             "Expected only 0s and 1s in predictions, got {}".format(y_pred)
         )
