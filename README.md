@@ -1,6 +1,10 @@
 # pytest tutorial
 This is a repository containing a tutorial for learning pytest. 
 
+## Oh no! 
+
+The code inside the `source_code` folder is meant for production, but the code is really dirty, unifinished and not tested! In order to feel comfortable moving this code to a production environment, your team has advised you to create tests to ensure that things work properly. The requirements for the different functions are given in the steps below. 
+
 ## Steps
 
 1. Create a virtual environment, either through conda or virtualenv.
